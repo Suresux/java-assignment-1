@@ -13,7 +13,7 @@ class A
     {
         //Second Constructor
 
- Ans: Already you have used private method constructor so we cannot use sub class in above program.
+ Ans: Already you have used private method constructor so we cannot use sub class in the given program.
 
 
 2. Does field ‘i’ of Class A be inherited to Class B in the below code?
