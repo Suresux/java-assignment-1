@@ -1,35 +1,7 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@Suresux 
-Venkata-Raja-Vara-Prasad-Sanayila
-/
-Day1-Assignment
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Day1-Assignment/JavaMcqAnswers.txt
-@Venkata-Raja-Vara-Prasad-Sanayila
-Venkata-Raja-Vara-Prasad-Sanayila Add files via upload
-Latest commit f6aee89 3 hours ago
- History
- 1 contributor
-271 lines (207 sloc)  5.64 KB
-   
 Answer the below question :
 
 1. Can you create a sub class to the following class?
-Ans: No we cannot create. Because in the below code the constructor methods are private.
+
 class A
 {
     private A()
@@ -40,11 +12,11 @@ class A
     private A(int i)
     {
         //Second Constructor
-    }
-}
+
+ Ans: Already you have used private method constructor so we cannot use sub class in above program.
+
 
 2. Does field ‘i’ of Class A be inherited to Class B in the below code?
-Ans: Yes, Because the protected access modifier is accessible within the package and it can also be accessible outside the package but through inheritance only.
 
 class A
 {
@@ -55,9 +27,10 @@ class B extends A
 {
      
 }
+Ans:Yes,if possible The protected access modifier is accessible Both  within the package and outside the package but through inheritance only.
+
 
 3. Is the below code written correctly?
-Ans : No below code is incorrect. Private members or inner private class we cannot inherit.
 
 class A
 {
@@ -75,8 +48,10 @@ public class MainClass extends A
     }
 }
 
+Ans: the given code is inncorect ,Becz its not posssible to inherit some private class or inner class in java.
+
+
 4. Is the below code written correctly?
-Ans: No the below code is incorrect. The Class with default access modifiers can not have subclass outside the package.
 
 package pack1;
  
@@ -91,34 +66,15 @@ class B extends A
 {
      
 }
+Ans: The given code is incorrect,These methods or data members are only accessible within the same package and they cannot be accessed from outside the package.
 
 5. Can we declare a class as protected?
-Ans : No, we cannot declare an outer class as protected. But we can declare inner class as protected.
-Ex: 
-class A
-{
-	 int j=100;
-	protected class B{
-		private int i=10;
-	}
-	void display() {
-		B b=new B();
-		System.out.print(b.i);
-	}
-}
-public class QueSubClass extends A{
 
-	public static void main(String[] args) {
-		QueSubClass a= new QueSubClass();
-		//QueSubClass.B b= a.new B();
-            a.display();
-		
-	}
+Ans: No, we can declare  inner class as protected and cannot declare outer class as protected.
 
-}
+
+
 6. Do you think the below program is written correctly? If yes, what will be the output?
-Ans : 1221
-      1221
 
 package pack1;
  
@@ -144,8 +100,9 @@ public class MainClass
     }
 }
 
+Ans: 1221.
+
 7. Is the below programme works ? If not what will be the reason ?
-Ans : No, the Class with default access modifier cannot be instantiated outside the package, even if it has public constructor.
 
 package pack1;
  
@@ -166,10 +123,13 @@ class B
     A a = new A();       //Compile Time Error
 }
 
+Ans: The default modifier is accessible only within package. It cannot be accessed from outside the package. It provides more accessibility than private. But, it is more restrictive than protected, and public.
+
+
 8. Can a protected field of a class be inherited to subclass outside the package?
-Ans : Yes, the protected field of a class be inherited to subclass outside the package.
+Ans: Yes, protected field of a class be inherited to subclass outside the package.
+
 9.Why Line 17 in the below code is throwing compile time error?
-Ans : The constructor A() is not visible as it is having protected access modifier.we cannot instantiate a class outside the package.
 
 package pack1;
  
@@ -189,36 +149,14 @@ class B
 {
     A a = new A();
 }
+Ans: The constructor A() is not visible as it is having protected access modifier.we cannot instantiate a class outside the package.
+
 
 10. Can we declare static methods as private?
-Ans : Yes, we can declare static methods as private.
+Ans: Yes, we can declare static methods as private.
 
-public class QueSubClass 
-
-{
-	static int i = 1221;
-    
-    private static void methodOfX()
-    {
-        i=143;
-    }
-    static {
-    	System.out.print("Hii");
-    }
-    public static void main(String[] args)
-    {
-        QueSubClass sam = new QueSubClass();
-      
-        sam.methodOfX();
-        System.out.println(sam.i);
-
-    }
-}
-
-output: Hii143
 
 11. What will be the outcome of the below program?
-Ans : 104
 
 package pack1;
  
@@ -254,9 +192,8 @@ public class MainClass
         System.out.println(new B().methodOne(101));
     }
 }
-
+Ans: 104
 12. Can you find out the error in the following code snippet?
-Ans : We cannot reduce the visibility while overriding a method. From the below code, the visibility of methodOfA() in class A is public but it is reduced to default while overriding in the class B. So it will give error.
 
 class A
 {
@@ -275,11 +212,14 @@ class B extends A
     }
 }
 
+Ans: We cannot reduce the visibility while overriding a method. the public class it is used to default overriding in the class B and the visibility of methodofA.
+
 13. private method can be overridden as public method. True or False?
-Ans : False, private methods cannot be overridden.
+Ans: False.
 
 14. A method of super class with default access modifier can be overridden as protected or public but not as private. True or false?
-Ans : True, the method of super class with default access modifier can be overridden as protected or public but not as private.
+Ans:True,the protected method of a superclass can be overridden by a subclass. If the superclass method is protected,
+    the subclass overridden method can have protected or public (but not default or private) which means the subclass overridden method can not have a weaker access specifier.
 
 15. Write the code on below scenario :
 
@@ -297,15 +237,3 @@ the salary of the employee as : employee's salary * hike (consider hike =10%).
 Data Sample :
 
 CEO : name : "Rajesh Kumar ", address : "SaltLake,Kolkata", salary : 70000, id :1, calculatedsalary : 70000*10%
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
